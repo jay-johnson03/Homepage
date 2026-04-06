@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.intro {
+  display: flex;
+}
+
+.image-wrap {
+    /*for overlay */
+  position: relative; 
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.image-wrap img {
+  width: 100%;
+  height: 100%;
+  /*makes sure it doesn't stretch */
+  object-fit: cover;
+  display: block;
+}
+
+.box-intro {
+    /*on top not beside the image */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.intro-content {
+    padding: 0 12px;
+}
