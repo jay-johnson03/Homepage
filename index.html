@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <audio id="bg-music" loop>
+        <source src="./media/browse.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="document.getElementById('bg-music').play()">▶ Play Music</button>
     <div class="intro">
         <div class="image-wrap">
             <p>Welcome to my homepage!</p>
@@ -35,7 +39,7 @@
         <div class="cards">
             <div class="card">
                 <h3>Song Shop</h3>
-                <p>A Local Express app that lets you browse music in 6 different genres and 
+                <p>A Local Express app that lets you browse music in 6 different genres and
                     links directly to the song on Spotify. Built using Node.js, Express, Spotify API, and EJS.
                 </p>
             </div>
@@ -47,14 +51,14 @@
             </div>
             <div class="card">
                 <h3>Student Newspaper</h3>
-                <p>A digital newspaper to showcase student-written articles and news reports from the 
-                    student on campus team. With the help of 2 other honors students, we built the website 
-                    using EJS, Express, Azure, SQL, Node.js, and Ghost CMS. 
+                <p>A digital newspaper to showcase student-written articles and news reports from the
+                    student on campus team. With the help of 2 other honors students, we built the website
+                    using EJS, Express, Azure, SQL, Node.js, and Ghost CMS.
                 </p>
             </div>
             <div class="card">
                 <h3>Landing Page</h3>
-                <p>A simple website used to practice modern styles of web design. Built using 
+                <p>A simple website used to practice modern styles of web design. Built using
                     HTML and CSS.
                 </p>
             </div>
@@ -66,14 +70,11 @@
             </div>
             <div class="card">
                 <h3>ODIN-Recipes</h3>
-                <p>A website with 3 of my favorite recipes from my Sophomore Fall Semester. 
+                <p>A website with 3 of my favorite recipes from my Sophomore Fall Semester.
                     Built using HTML and CSS.
                 </p>
             </div>
         </div>
-        <audio autoplay loop>
-            <source src="./media/browse.mp3" type="audio/mpeg">
-        </audio>
 </body>
 
 </html>
