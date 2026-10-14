@@ -12,70 +12,74 @@
     <video autoplay muted loop playsinline id="bg-video">
         <source src="./media/202824-919000180.mp4" type="video/mp4">
     </video>
-    <div class="intro">
-        <div class="image-wrap">
-            <p>Welcome to my homepage!</p>
-            <img src="./media/profile-pic.jpeg" alt="Logo" class="logo">
+    <main class="page-layout">
+        <div class="page-content">
+            <div class="intro">
+                <div class="homepage-title">
+                    <p>Welcome to my homepage!</p>
+                    <img src="./media/profile-pic.jpeg" alt="Jay Johnson" class="logo">
+                </div>
+                <div class="intro-content">
+                    <h1>About Me</h1>
+                    <p> Yoooo! My name is Jay Johnson and I'm a Junior in college
+                        studying Computer Science (yikes, nerdy right?). I am from the
+                        North area where I grew up around music for most of my life.
+                        I sing a little, play a little, and laugh alot. I have a mom,
+                        dad, little sister, and a dog named Basil. Although my personality
+                        might not shine through in this website, I hope you'll get a good peek
+                        of what I'm capable of through the projects down below! Please enjoy the
+                        complimentary music (composed by me) while you browse around!
+                    </p>
+                    <audio id="bg-music" loop>
+                        <source src="./media/browse.mp3" type="audio/mpeg">
+                    </audio>
+                    <button onclick="document.getElementById('bg-music').play()">▶ Play Music</button>
+                </div>
+            </div>
+            <section class="project-container">
+                <h2>Projects</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Song Shop</h3>
+                        <p>A Local Express app that lets you browse music in 6 different genres and
+                            links directly to the song on Spotify. Built using Node.js, Express, Spotify API, and EJS.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Homepage</h3>
+                        <p>A website that introduces me and my projects I've built in the past. Uses HTML, CSS
+                            and JavaScript.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Student Newspaper</h3>
+                        <p>A digital newspaper to showcase student-written articles and news reports from the
+                            student on campus team. With the help of 2 other honors students, we built the website
+                            using EJS, Express, Azure, SQL, Node.js, and Ghost CMS.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Landing Page</h3>
+                        <p>A simple website used to practice modern styles of web design. Built using
+                            HTML and CSS.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>Image Filter</h3>
+                        <p>A FXML application that allows you to choose a photo and apply various filters to it.
+                            With the help of 2 other honors students, we built the application using Java and JavaFX.
+                        </p>
+                    </article>
+                    <article class="card">
+                        <h3>ODIN-Recipes</h3>
+                        <p>A website with 3 of my favorite recipes from my Sophomore Fall Semester.
+                            Built using HTML and CSS.
+                        </p>
+                    </article>
+                </div>
+            </section>
         </div>
-        <div class="intro-content">
-            <h1>About Me</h1>
-            <p> Yoooo! My name is Jay Johnson and I'm a Junior in college
-                studying Computer Science (yikes, nerdy right?). I am from the
-                North Texas area where I grew up around music for most of my life.
-                I sing a little, play a little, and laugh alot. I have a mom,
-                dad, little sister, and a dog named Basil. Although my personality
-                might not shine through in this website, I hope you'll get a good peek
-                of what I'm capable of through the projects down below! Please enjoy the
-                complimentary music (composed by me) while you browse around!
-            </p>
-            <audio id="bg-music" loop>
-                <source src="./media/browse.mp3" type="audio/mpeg">
-            </audio>
-            <button onclick="document.getElementById('bg-music').play()">▶ Play Music</button>
-        </div>
-    </div>
-    <div class="project-container">
-        <h2>Projects</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Song Shop</h3>
-                <p>A Local Express app that lets you browse music in 6 different genres and
-                    links directly to the song on Spotify. Built using Node.js, Express, Spotify API, and EJS.
-                </p>
-            </div>
-            <div class="card">
-                <h3>Homepage</h3>
-                <p>A website that introduces me and my projects I've built in the past. Uses HTML, CSS
-                    and JavaScript.
-                </p>
-            </div>
-            <div class="card">
-                <h3>Student Newspaper</h3>
-                <p>A digital newspaper to showcase student-written articles and news reports from the
-                    student on campus team. With the help of 2 other honors students, we built the website
-                    using EJS, Express, Azure, SQL, Node.js, and Ghost CMS.
-                </p>
-            </div>
-            <div class="card">
-                <h3>Landing Page</h3>
-                <p>A simple website used to practice modern styles of web design. Built using
-                    HTML and CSS.
-                </p>
-            </div>
-            <div class="card">
-                <h3>Image Filter</h3>
-                <p>A FXML application that allows users to chose a photo and apply various filters to it.
-                    With the help of 2 other honors students, we built the application using Java and JavaFX.
-                </p>
-            </div>
-            <div class="card">
-                <h3>ODIN-Recipes</h3>
-                <p>A website with 3 of my favorite recipes from my Sophomore Fall Semester.
-                    Built using HTML and CSS.
-                </p>
-            </div>
-        </div>
-    </div>
+    </main>
 </body>
 
 </html>

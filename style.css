@@ -3,39 +3,147 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #202b2a;
+  background: #253332;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 760px) minmax(0, 1fr);
+  gap: 32px;
+  min-height: 100vh;
+  padding: 48px 24px;
+}
+
+.page-content {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.side-content-left {
+  grid-column: 1;
+}
+
+.side-content-right {
+  grid-column: 3;
+}
+
 .intro {
+  display: grid;
+  gap: 28px;
+}
+
+.homepage-title {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
 }
 
-.image-wrap {
-    /*for overlay */
-  position: relative; 
+.homepage-title p {
+  margin: 0;
+}
+
+.homepage-title .logo {
   width: 220px;
-  flex-shrink: 0;
-}
-
-.image-wrap img {
-  width: 100%;
-  height: 100%;
-  /*makes sure it doesn't stretch */
+  height: 220px;
   object-fit: cover;
-  display: block;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.9);
 }
 
 .intro-content {
-    padding: 0 12px;
-    font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
+  padding: 28px;
+  font-size: 17px;
+  line-height: 1.6;
+  background-color: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+}
+
+.intro-content h1,
+.project-container h2 {
+  margin: 0 0 12px;
+}
+
+.intro-content p {
+  margin: 0 0 18px;
+}
+
+button {
+  padding: 10px 16px;
+  color: #fff;
+  background: #27645c;
+  border: 0;
+  border-radius: 5px;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4f49;
+}
+
+.project-container {
+  margin-top: 36px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  min-width: 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: #27645c;
+}
+
+.card p {
+  margin: 0;
+  line-height: 1.5;
 }
 
 #bg-video {
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  opacity: 0.45;
   z-index: -1;
   pointer-events: none;
+}
+
+@media (max-width: 760px) {
+  .page-layout {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 32px 16px;
+  }
+
+  .page-content {
+    grid-column: 1;
+  }
+
+  .homepage-title {
+    font-size: 34px;
+  }
+
+  .cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
