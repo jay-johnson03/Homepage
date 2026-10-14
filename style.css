@@ -139,6 +139,11 @@ button:hover {
     grid-column: 1;
   }
 
+  .side-content-left,
+  .side-content-right {
+    grid-column: 1;
+  }
+
   .homepage-title {
     font-size: 34px;
   }
