@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Homepage</title>
 </head>
@@ -30,10 +33,9 @@
                         of what I'm capable of through the projects down below! Please enjoy the
                         complimentary music (composed by me) while you browse around!
                     </p>
-                    <audio id="bg-music" loop>
-                        <source src="./media/browse.mp3" type="audio/mpeg">
+                    <audio autoplay loop muted>
+                        <source src="/media/browse.mp3" type="audio/mpeg">
                     </audio>
-                    <button onclick="document.getElementById('bg-music').play()">▶ Play Music</button>
                 </div>
             </div>
             <section class="project-container">
