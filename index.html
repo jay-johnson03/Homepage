@@ -15,8 +15,15 @@
     <video autoplay muted loop playsinline id="bg-video">
         <source src="./media/202824-919000180.mp4" type="video/mp4">
     </video>
-    <main class="page-layout">
-        <div class="page-content">
+    <main class="middle-layout">
+        <aside class="sidebar sidebar-left" aria-label="Left sidebar">
+            <div class="sidebar-card" aria-hidden="true">
+
+            </div>
+            <div class="sidebar-card" aria-hidden="true"></div>
+        </aside>
+
+        <div class="middle-content">
             <div class="intro">
                 <div class="homepage-title">
                     <p>Welcome to my homepage!</p>
@@ -33,9 +40,6 @@
                         of what I'm capable of through the projects down below! Please enjoy the
                         complimentary music (composed by me) while you browse around!
                     </p>
-                    <audio autoplay loop muted>
-                        <source src="/media/browse.mp3" type="audio/mpeg">
-                    </audio>
                 </div>
             </div>
             <section class="project-container">
@@ -81,7 +85,25 @@
                 </div>
             </section>
         </div>
+
+        
+        <aside class="sidebar sidebar-right" aria-label="Right sidebar">
+            <section class="music-player" aria-label="Music player">
+                <h2>Music</h2>
+                <audio id="music-audio" src="./media/browse.mp3" preload="metadata" loop></audio>
+                <div class="music-controls">
+                    <button type="button" id="music-back" aria-label="Go back 10 seconds" disabled>-10s</button>
+                    <button type="button" id="music-toggle" aria-label="Play music">Play</button>
+                    <button type="button" id="music-forward" aria-label="Skip forward 10 seconds" disabled>+10s</button>
+                </div>
+                <output id="music-time" aria-label="Playback position">0:00</output>
+                <p id="music-status" role="status" aria-live="polite"></p>
+            </section>
+            <div class="sidebar-card" aria-hidden="true"></div>
+            <div class="sidebar-card" aria-hidden="true"></div>
+        </aside>
     </main>
+    <script src="index.js" defer></script>
 </body>
 
 </html>
