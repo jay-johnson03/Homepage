@@ -2,6 +2,9 @@
     box-sizing: border-box;
 }
 
+
+/* MIDDLE LAYOUT */
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -13,7 +16,7 @@ body {
 
 .middle-layout {
   display: grid;
-  grid-template-columns: minmax(160px, 1fr) minmax(0, 760px) minmax(160px, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 760px) minmax(0, 1fr);
   gap: 32px;
   min-height: 100vh;
   padding: 48px 24px;
@@ -24,57 +27,12 @@ body {
   min-width: 0;
 }
 
-.sidebar {
-  display: grid;
-  align-content: start;
-  gap: 16px;
-  min-width: 0;
-}
-
-.sidebar-left {
+.side-content-left {
   grid-column: 1;
 }
 
-.sidebar-right {
+.side-content-right {
   grid-column: 3;
-}
-
-.sidebar-card,
-.music-player {
-  min-height: 140px;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-}
-
-.music-player {
-  min-height: 0;
-}
-
-.music-player h2 {
-  margin: 0 0 12px;
-}
-
-.music-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.music-controls button {
-  padding: 8px 10px;
-}
-
-#music-time {
-  display: block;
-  margin-top: 10px;
-  font-size: 14px;
-}
-
-#music-status {
-  margin: 8px 0 0;
-  font-size: 14px;
 }
 
 .intro {
@@ -175,20 +133,19 @@ button:hover {
   pointer-events: none;
 }
 
-@media (max-width: 1050px) {
-  .middle-layout {
+@media (max-width: 760px) {
+  .page-layout {
     grid-template-columns: minmax(0, 1fr);
     padding: 32px 16px;
   }
 
-  .middle-content,
-  .sidebar-left,
-  .sidebar-right {
+  .page-content {
     grid-column: 1;
   }
 
-  .sidebar {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .side-content-left,
+  .side-content-right {
+    grid-column: 1;
   }
 
   .homepage-title {
@@ -196,12 +153,6 @@ button:hover {
   }
 
   .cards {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-@media (max-width: 520px) {
-  .sidebar {
     grid-template-columns: minmax(0, 1fr);
   }
 }
